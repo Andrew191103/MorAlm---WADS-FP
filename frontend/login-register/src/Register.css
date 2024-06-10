@@ -1,0 +1,211 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+/* animation */
+@keyframes slideDownToUp{
+    from{
+        transform: translateY(5vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 27px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+@keyframes sparkle {
+    0% { 
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Logo's CSS */
+
+.appLogo{
+    position: absolute;
+    margin-top: 7vh;
+    margin-left: 10vh;
+    transform: scale(1.3);
+}
+
+/* Register.jsx */
+
+.Register{
+    display: grid;
+    grid-template-columns: 58% 42%;
+    height: 100vh;
+}
+
+.RegisterText{
+    font-family: 'DM Sans';
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 21.6vh;
+    animation: slideDownToUp 0.5s ease-in-out forwards;
+}
+
+.backToLogin{
+    margin-top: 1.7%;
+    text-align: center;
+    font-family: 'DM Sans';
+    animation: slideDownToUp 1.5s ease-in-out forwards;
+    /* unvisited link */
+    a:link { 
+        text-decoration: none;
+        color: #6A6A6A; 
+      }
+    /* visited link */ 
+    a:visited { 
+        text-decoration: none;
+        color: #6A6A6A; 
+      }
+    /* mouse over link */ 
+    a:hover { 
+        color: #7BAB42; 
+      }
+    /* selected link */ 
+    a:active { 
+        color: #7BAB42; 
+      }
+      
+}
+
+/* LoginGreen.jsx */
+
+.LoginGreen{
+    background-color: #7BAB42;
+    height: 100%;
+    width: 100%;
+}
+
+/* UserName.jsx */
+
+.textFieldReg{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    gap: 1rem;
+    animation: slideDownToUp 0.7s ease-in-out forwards;
+}
+
+.textFieldReg fieldset{
+    border: 0;
+}
+
+/* PhoneNumber.jsx */
+
+.phoneNum{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    animation: slideDownToUp 0.9s ease-in-out forwards;
+}
+
+.phoneNum fieldset{
+    border: 0;
+}
+
+/* UserRole.jsx */
+.userRole{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 1rem;
+    animation: slideDownToUp 1.1s ease-in-out forwards;
+}
+
+.userRole fieldset{
+    border: 0;
+}
+
+/* PasswordReg.jsx */
+
+.passwordRegister{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    animation: slideDownToUp 1.3s ease-in-out forwards;
+}
+
+.passwordRegister fieldset{
+    border: 0;
+}
+
+/* RetrieveEmail.jsx */
+
+.regRetrieveButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    height: 5%;
+    animation: slideDownToUp 1.5s ease-in-out forwards;
+}
+
+/* RegisterImage.jsx */
+
+.RegisterImage{
+    position: absolute;
+    width: 52%;
+    height: 71%;
+    margin-left: 45vw;
+    margin-top: 15vh;
+    animation: slideDownToUp 1.1s ease-in-out forwards;
+}
+
+.RegisterImage1{
+    position: absolute;
+    width: 52%;
+    height: 71%;
+    margin-left: 45vw;
+    margin-top: 15vh;
+    animation: sparkle 6s ease infinite;
+    animation-delay: 0s;
+}
+
+.RegisterImage2{
+    position: absolute;
+    width: 52%;
+    height: 71%;
+    margin-left: 45vw;
+    margin-top: 15vh;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.RegisterImage3{
+    position: absolute;
+    width: 52%;
+    height: 71%;
+    margin-left: 45vw;
+    margin-top: 15vh;
+    animation: sparkle 5.8s ease infinite;
+    animation-delay: 1s;
+}
+
+.RegisterImage4{
+    position: absolute;
+    width: 52%;
+    height: 71%;
+    margin-left: 45vw;
+    margin-top: 15vh;
+    animation: sparkle 4.6s ease infinite;
+    animation-delay: 0.5s;
+}

@@ -1,0 +1,157 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+/* animation */
+@keyframes slideDownToUp{
+    0%{
+        transform: translateY(5vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 27px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+
+/* Logo's CSS */
+
+.appLogo{
+    position: absolute;
+    margin-top: 7vh;
+    margin-left: 10vh;
+    transform: scale(1.3);
+}
+
+/* Login.jsx */
+
+.Login{
+    display: grid;
+    grid-template-columns: 58% 42%;
+    height: 100vh;
+}
+
+.loginText{
+    font-family: 'DM Sans';
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 29vh;
+    animation: slideDownToUp 0.5s ease-in-out forwards;
+}
+
+.loginTextTwo{
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 1.5%;
+    text-align: center;
+    animation: slideDownToUp 0.7s ease-in-out forwards;
+}
+
+/* LoginGreen.jsx */
+
+.LoginGreen{
+    background-color: #7BAB42;
+    height: 100%;
+    width: 100%;
+}
+
+/* LoginImage.jsx */
+
+.LoginImage{
+    position: absolute;
+    width: 46%;
+    height: 61%;
+    margin-left: 47vw;
+    margin-top: 16.8vh;
+    animation: slideDownToUp 1.3s ease-in-out forwards;
+}
+
+.LoginImage1{
+    position: absolute;
+    width: 46%;
+    height: 61%;
+    margin-left: 47vw;
+    margin-top: 16.8vh;
+    animation: floating 3.7s ease-in-out infinite
+}
+
+.LoginImage2{
+    position: absolute;
+    width: 46%;
+    height: 61%;
+    margin-left: 47vw;
+    margin-top: 16.8vh;
+    animation: floating 6s ease-in-out infinite
+}
+
+.LoginImage3{
+    position: absolute;
+    width: 46%;
+    height: 61%;
+    margin-left: 47vw;
+    margin-top: 16.8vh;
+    animation: floating 4.5s ease-in-out infinite
+}
+
+.LoginImage4{
+    position: absolute;
+    width: 46%;
+    height: 61%;
+    margin-left: 47vw;
+    margin-top: 16.8vh;
+    animation: floating 5s ease-in-out infinite
+}
+  
+
+/* EmailText.jsx */
+
+.textField{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    animation: slideDownToUp 0.9s ease-in-out forwards;
+}
+
+.textField fieldset{
+    border: 0;
+}
+
+/* PasswordText.jsx */
+
+.passwordField{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    animation: slideDownToUp 1.1s ease-in-out forwards;
+}
+
+.passwordField fieldset{
+    border: 0;
+}
+
+
+/* LoginButton.jsx */
+
+.logButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    height: 5%;
+    animation: slideDownToUp 1.3s ease-in-out forwards;
+}
+
+.regButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    height: 5%;
+    animation: slideDownToUp 1.5s ease-in-out forwards;
+}
