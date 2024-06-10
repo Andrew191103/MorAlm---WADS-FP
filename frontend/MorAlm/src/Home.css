@@ -1,0 +1,424 @@
+.moralmlogo {
+  margin-left: -5%;
+  max-width: 180px;
+  padding-bottom: 10px;
+  margin-top: -25px;
+  margin-bottom: 10%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #467e18;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav.open {
+  width: 25vh;
+  padding-left: 3%;
+}
+
+.sidenav a {
+  padding: 20px 20px 20px 50px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: DM Sans, sans-serif;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+}
+
+.sidenav a.active {
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  border-radius: 40px 0 0 40px;
+  padding-left: 45px;
+  margin-left: -5px;
+  position: relative;
+}
+
+/* .sidenav a.active::after {
+  content: '•';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #467e18;
+} */
+
+.sidenav a:hover {
+  color: #9f9f9f;
+}
+
+.closebtn {
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ffffff;
+  background: none;
+  border: none;
+}
+
+.closebtn:hover {
+  color: #9f9f9f;
+}
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.top-right-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-right-buttons.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-container:hover {
+  background-color: #9f9f9f;
+}
+
+.icon-container-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Adjust the space between icons */
+}
+
+.icon {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.arrow {
+  transform: translateX(5px); /* Adjust the arrow position to look visually aligned */
+}
+
+.content-container {
+  margin-left: 16%;
+  margin-right: 2%;
+  margin-top: 10px; /* Adjust as needed to control the space below the icons */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content-container h2 {
+  margin-top: 125px; 
+  margin-left: -10px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+.ProcessTitle{
+  font-family: DM Sans, sans-serif;
+}
+/* 
+.batch-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: DM Sans, sans-serif;
+}
+
+.batch-container {
+  border: 1px solid #033324;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+.batch-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+} */
+
+.time-ellipsis {
+  display: flex;
+  align-items: center;
+} 
+
+.ellipsis {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+/* .batch-dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+}
+
+.batch-dropdown.active .dropdown-content {
+  display: block;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  background-color: #EFEFEF;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative; /* Add position relative */
+}
+
+.process-step.completed {
+  background-color: #033324;
+}
+
+.process-step .step-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: black; /* Default color for the number */
+}
+
+.process-step.completed .step-number {
+  color: white; /* Color for completed step number */
+}
+
+.process-step .step-text {
+  font-size: 12px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  color: black; 
+}
+
+.process-step:hover {
+  background-color: #9f9f9f;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .sidenav.open {
+    width: 20vh;
+  }
+
+  .content-container {
+    margin-left: 25%;
+  }
+
+  .content-container h2, .ProcessTitle {
+    font-size: 2rem;
+  }
+
+  .moralmlogo {
+    width: 80%;
+    height: auto;
+  }
+}
+
+.title-header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: DM Sans, sans-serif;
+  padding: 5px;
+  background-color: #EFEFEF;
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* .title-header p {
+  margin: 0; 
+  font-size: 15px; 
+  font-weight: bold;
+} */
+
+.title-modal {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+.column-header {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.batch-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: DM Sans, sans-serif;
+  font-size: 15px;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* css for batch 1, batch 2 */
+.batch-title { 
+  display: flex;
+  justify-content: space-between;
+  font-family: DM Sans, sans-serif;
+  font-weight: 500;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  text-align: left;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  box-sizing: border-box;
+}
+
+/* .dropdown-button:hover {
+  background-color: #367c39; 
+} */
+
+.batch-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow steps to wrap to the next line */
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 10px; /* Adjust margin to create space between steps */
+  flex-grow: 1; /* Allow steps to grow to fill available space */
+}
+
+.step-container:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -50%; /* Adjust position for the line */
+  width: 100%; /* Full width */
+  height: 1px;
+  background-color: #033324;
+  z-index: 0;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #033324;
+  z-index: 1;
+}
+
+.step-container.completed .step-circle {
+  background-color: #033324;
+  color: white;
+}
+
+.step-name {
+  margin-top: 5px;
+  color: black;
+  text-align: center;
+  white-space: nowrap; 
+}

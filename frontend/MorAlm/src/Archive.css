@@ -1,0 +1,127 @@
+.archive-content {
+    width: 95%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #333; /* Adjust font color */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* Add curves to the table corners */
+    overflow: hidden; /* To ensure the border-radius works with the table */
+    padding: 20px; /* Add padding for content */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.Historytitle{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: DM Sans, sans-serif;
+}
+
+.header .title {
+    font-size: 24px;
+    margin-right: auto;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: DM Sans, sans-serif;
+    width: 200px;
+    margin-right: 10px;
+    height: 30px;
+    width: 230px;
+    background-color: #EFEFEF;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: separate; /* Use separate borders */
+    border-spacing: 0; /* Reset any default spacing */
+    background-color: #fff; /* Match the background color */
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.history-table th, .history-table td {
+    padding: 12px;
+    font-family: DM Sans, sans-serif;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: black; /* Ensure global styles do not override the table cell colors */
+}
+
+.history-table th {
+    background-color: #033324;
+    color: white;
+    font-weight: normal;
+    border: 1px solid #033324; /* Match border color */
+}
+
+.history-table th:first-child {
+    border-top-left-radius: 10px; /* Add curves to top-left corner */
+}
+
+.history-table th:last-child {
+    border-top-right-radius: 10px; /* Add curves to top-right corner */
+}
+
+.history-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Add curves to bottom-left corner */
+}
+
+.history-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Add curves to bottom-right corner */
+}
+
+.history-table thead {
+    display: table-header-group;
+}
+
+.history-table tbody {
+    display: table-row-group;
+}
+
+.history-table thead::after {
+    content: "";
+    display: block;
+    height: 15px; /* Adjust this value to control the space */
+    background-color: white; /* Match background color to create the visual gap */
+}
+
+.pagination {
+    display: flex;
+    font-family: DM Sans, sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: black;
+}
+
+.page-controls span {
+    margin: 0 5px;
+    font-family: DM Sans, sans-serif;
+    cursor: pointer;
+}
+
+.page-controls span:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+

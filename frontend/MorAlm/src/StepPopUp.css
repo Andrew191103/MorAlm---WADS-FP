@@ -1,0 +1,215 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+  height: auto; /* Auto height to accommodate content */
+  width: 400px;
+  max-width: 85%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: -100px;
+  margin-left: 15px;
+}
+
+.step-title {
+  margin: 0; /* Remove margin for better alignment */
+}
+
+.modal-body {
+  margin-bottom: 20px; /* This margin might be causing the space */
+  margin-left: 20px; /* Adjust as needed */
+}
+
+
+/* You can adjust the margin or padding here to reduce the space */
+
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-button, .close-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.confirm-button {
+  background-color: #467E18;
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  align-self: center;
+  width: 100%;
+  font-family: DM Sans, sans-serif;
+  font-size: 17px;
+}
+
+.confirm-button:hover {
+  background-color: #265c28;
+}
+
+.close-button {
+  background: none;
+  color: black;
+  font-size: 1.5em;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.modal-field label {
+  display: block;
+  font-weight: normal;
+  margin-top: 10%;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.modal-number {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: DM Sans, sans-serif;
+  margin-top: 5%;
+}
+
+.modal-deliver input[type="text"],
+.modal-deliver input[type="date"],
+.modal-field textarea {
+    flex-grow: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.modal-field select {
+    flex-grow: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 20%;
+}
+
+.modal-field select option {
+    padding: 10px;
+    background-color: #f1f1f1 ;
+    color: black;
+    border-radius: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.modal-label{
+  font-size: 17px;
+  font-weight: normal;
+  font-family: DM Sans, sans-serif;
+  margin-top: 5%;
+}
+
+.modal-field span {
+  display: block;
+  padding: 8px;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.modal-deliver, .modal-field {
+  gap: 20px;
+}
+
+.modal-deliver{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: DM Sans, sans-serif;
+}
+
+.title-deliver{
+  display: flex;
+  align-items: left;
+  margin-top: 10%;
+  margin-bottom: 12%;
+  font-family: DM Sans, sans-serif;
+  font-size: 20px;
+}
+
+.modal-rescalling {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: -35px;
+  flex-grow: 1;
+  font-family: DM Sans, sans-serif;
+  color: gray;
+}
+
+.input-right-placeholder {
+  text-align: right;
+}
+
+
+.modal-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note-field {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  color: black;
+  font-family: DM Sans, sans-serif;
+}

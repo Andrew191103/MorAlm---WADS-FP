@@ -1,0 +1,242 @@
+.warehouse-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.warehouse-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 600px; /* Fixed width */
+    max-height: 85%; /* Adjust to fit within viewport */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Ensure content flows vertically */
+}
+
+.warehouse-modal-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.warehouse-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.AllPackageTitle {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: DM Sans, sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.SelectAllCheckbox {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: DM Sans, sans-serif;
+    margin-top: 20px;
+}
+
+.warehouse-select-all-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.warehouse-select-all-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #033324;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
+
+.warehouse-select-all-checkbox:checked + label::before {
+    background-color: #033324;
+    content: "\2713"; /* Unicode character for checkmark */
+    font-size: 16px; /* Adjust size of the checkmark */
+    line-height: 20px; /* Center checkmark vertically */
+    text-align: center; /* Center checkmark horizontally */
+    color: white; /* Color of the checkmark */
+}
+
+.warehouse-modal-body {
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+    max-height: 300px; /* Adjust the max height as needed */
+    overflow-y: auto; /* Add a scroll bar for overflow content */
+}
+
+/* Customizing scrollbar */
+.warehouse-modal-body::-webkit-scrollbar {
+    width: 7px !important; /* Slightly wider scrollbar for better visibility */
+}
+
+.warehouse-modal-body::-webkit-scrollbar-track {
+    border-radius: 10px !important; /* Rounded corners */
+}
+
+.warehouse-modal-body::-webkit-scrollbar-thumb {
+    background-color: rgba(70, 126, 24, 0.7) !important; /* Scrollbar thumb color */
+    border-radius: 10px !important; /* Rounded corners */
+}
+
+.warehouse-batch-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #033324;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    font-family: DM Sans, sans-serif;
+    position: relative;
+}
+
+.warehouse-batch-item.selected {
+    background-color: #033324; /* green background color */
+    color: white; /* white font color */
+}
+
+.warehouse-batch-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.warehouse-batch-item input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #033324;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 20px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
+
+.warehouse-batch-item input[type="checkbox"]:checked + label::before {
+    background-color: white;
+    content: "\2713"; /* Unicode character for checkmark */
+    font-size: 16px; /* Adjust size of the checkmark */
+    line-height: 20px; /* Center checkmark vertically */
+    text-align: center; /* Center checkmark horizontally */
+    color: black; /* Color of the checkmark */
+}
+
+.dropdown-container {
+    position: relative;
+    margin-left: auto;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    padding: 0 5px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.warehouse-modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.warehouse-confirm-button {
+    background-color: #467E18;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+    width: 50%;
+    font-family: DM Sans, sans-serif;
+    font-size: 17px;
+}
+
+.warehouse-close-button {
+    background: none;
+    border: none;
+    font-size: 31px;
+    margin-top: -20px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Add a style for the white color */
+.dropdown-button.white {
+    color: white;
+}
+
+.warehouse-select-all-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Adjust width */
+    height: 20px; /* Adjust height */
+    border: 2px solid #033324;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
