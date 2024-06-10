@@ -1,0 +1,171 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #033324 ;
+}
+    
+.back-button {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 80px;
+    color: black;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 1; 
+}
+
+.content {
+    flex-grow: 1;  
+    padding: 20px;
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+.BP-title {
+    margin-top: 1%;
+    margin-bottom: 3%; 
+    font-family: DM Sans, sans-serif;
+    font-size: 30px;
+    display: flex; 
+    font-weight: 600;
+    align-items: center;
+}
+
+.title-header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: DM Sans, sans-serif;
+    padding: 5px;
+    background-color: #EFEFEF;
+    color: black;
+    width: 90%;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+/* .title-header p {
+    margin: 0; 
+    font-size: 15px; 
+    font-weight: bold;
+} */
+
+.title-modal {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+
+.column-header {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+.batch-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* css for batch 1, batch 2 */
+.batch-title { 
+    display: flex;
+    justify-content: space-between;
+    font-family: DM Sans, sans-serif;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+  
+/* .dropdown-button:hover {
+    background-color: #367c39; 
+} */
+  
+.batch-content {
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+  
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 40px;
+}
+  
+.step-container:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    width: calc(100% + 80px); 
+    height: 1px;
+    background-color: #033324;
+    z-index: 0;
+}
+  
+@media (min-width: 1200px) {
+    .step-container {
+        margin: 0 200px;
+    }
+    .step-container:not(:last-child)::after {
+        width: calc(100% + 400px); 
+    }
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #033324;
+    z-index: 1;
+}
+  
+.step-container.completed .step-circle {
+    background-color: #033324;
+    color: white;
+}
+  
+.step-name {
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+    white-space: nowrap; 
+}

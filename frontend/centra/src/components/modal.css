@@ -1,0 +1,165 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /*change to auto if we use the table*/
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.modal-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+.step-content {
+    margin-bottom: 20px;
+    color: black;
+    text-align: justify;
+    margin-left: 15px;
+}
+
+.confirm-button {
+    background-color: #467E18;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 48%;
+}
+
+.close {
+    background-color: #ccc;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 48%;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 4%; 
+    margin-top: 10%;
+    width: 100%;
+}
+
+.modal-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.modal-fieldWnD{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.modal-label{
+    font-size: 17px;
+    font-weight: normal;
+    font-family: DM Sans, sans-serif;
+    margin-left: 10px;
+    margin-top: 5%;
+}
+
+.modal-field input[type="number"],
+.modal-field input[type="date"],
+.modal-field textarea {
+    flex-grow: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.modal-field select {
+    flex-grow: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 20%;
+}
+
+.modal-field select option {
+    padding: 10px;
+    background-color: #f1f1f1 ;
+    color: black;
+    border-radius: 0;
+}
+
+.modal-field span {
+    display: block;
+    padding: 8px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/* .delivery-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.delivery-table th, .delivery-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.delivery-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.deliver-button {
+    background-color: #004225;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deliver-button:hover {
+    background-color: #00311a;
+} */
