@@ -1,0 +1,380 @@
+*{
+  font-family: 'DM Sans';
+  margin: 0;
+  padding: 0;
+}
+
+/* Header.jsx */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  position: relative;
+  background: linear-gradient(to right, #467E18 0%, #467E18 12%, #699744 10%, #699744 15%, #81A862 20%, #81A862 20%, #90B274 20%, #90B274 100%);
+}
+
+.gradient-bar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.segment {
+  height: 100%;
+}
+
+.segment1 {
+  background-color: #467E18;
+  width: 20%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.segment2 {
+  background-color: #699744;
+  width: 5%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.segment3 {
+  background-color: #81A862;
+  width: 5%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.segment4 {
+  background-color: #90B274;
+  width: 100%;
+}
+
+.nav-left {
+  z-index: 1; 
+  margin-left: 1%;
+}
+
+.nav-right {
+  z-index: 1; 
+  margin-right: 1%;
+  display: flex;
+  align-items: center;
+}
+
+.logoimg {
+  margin-left: 10%;
+  margin-top: 4%;
+  max-width: 150px; 
+}
+
+.useravatar {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.user-name{
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.user-id{
+  margin-top: 0.3vh;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.user-info{
+  color:white;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+/* App.jsx */
+
+.ShipmentTracking {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600; 
+  margin-top: 5.5vh;
+  margin-left: 9.5vw;
+}
+
+/* Filter.jsx */
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 4rem;
+}
+
+.filter button {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 13vw;
+  height: 4vh;
+  overflow: hidden;
+  background-color: #467E18;
+  /* experimental */
+  box-shadow: 2px 5px 15px #bcc1bc;
+}
+
+.filter .button-text {
+  flex: 1;
+  background-color: #467E18; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter .button-count {
+  background-color: #90B274; 
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 3vw; 
+  height: 40px;
+}
+
+.filter button:hover {
+  background-color: #90B274;
+  color: black;
+}
+
+.filter button:hover .button-text {
+  background-color: #90B274; 
+  color: black;
+}
+
+.filter button:hover .button-count {
+  background-color: #467E18; 
+  color: black;
+}
+
+.filterbox{
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 8px;
+}
+
+.filter .button-text {
+  flex-grow: 1;
+}
+
+/* PackageBox.jsx */
+
+.Box{
+  background: #CEDDC2;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 8px;
+  /* experimental */
+  box-shadow: 5px 7px 15px #bcc1bc;
+}
+
+.PackageBox {
+  max-width: 80%;
+  margin: auto;
+  background: #CEDDC2;
+  padding: 10px;
+  height: 60vh;
+  border-radius: 8px;
+  overflow-y: auto;
+  overflow: auto;
+  padding-top: 10px;
+}
+
+.PackageBox::-webkit-scrollbar {
+  width: 0.5vh;
+}
+
+.PackageBox::-webkit-scrollbar-thumb {
+  background-color: #467E18; 
+  border-radius: 6px;
+}
+
+/* PackageList.jsx */
+
+.PackageList {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  /* top, right, bottom, and left */
+  margin: 10px 25px 30px 25px;
+  padding: 10px 30px 30px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  position: relative;
+  /* experimental */
+  box-shadow: 5px 7px 20px #9fb88a;
+}
+
+.PackageList p {
+  margin: 5px 0; 
+}
+
+.PackageList p strong {
+  font-weight: bold;
+}
+
+.PackageList p strong.underlined {
+  text-decoration: underline;
+}
+.PackageList p strong.underlined {
+  text-decoration: underline;
+}
+
+.PackageList p strong.small {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.pending {
+  color: #9D9023;
+  background-color: #E5D32F;
+  padding:4px;
+  border-radius: 5px;
+}
+
+.arrived {
+  color: #9D9023;
+  background-color: #E5D32F;
+  padding:4px;
+  border-radius: 5px;
+}
+
+.cancelled {
+  color: red;
+  background-color: rgb(255, 190, 190);
+  padding:4px;
+  border-radius: 5px;
+}
+
+.received {
+  color: green;
+  background-color: lightgreen;
+  padding:4px;
+  border-radius: 5px;
+}
+
+.column {
+  flex: 1;
+  padding-bottom: 1vh;
+  padding-top: 2vh;
+}
+
+.leftcolumn, .rightcolumn {
+  width: 50%;
+}
+
+hr.separator-line{
+  border: 1px solid #EFEFEF;
+}
+
+.statsbutton {
+  position: absolute;
+  width: 14vw;
+  height: 5vh;
+  bottom: 0%;
+  right: 10px;
+  background-color: #033324;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.statsbutton:hover {
+  background-color: #236752;
+}
+
+.ellipsis {
+  position: absolute;
+  top: 7%;
+  right: 0%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  margin-right: 2.5vw;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 14%; 
+  right: 2%; 
+  background-color: #90B274;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white; 
+}
+
+
+.dropdown-menu button:hover {
+  background-color: #6d904f;
+}
+
+
+.dropdown-menu button + button {
+  border-top: 1px solid #ccc;
+}
+
+.received-date {
+  position: absolute;
+  bottom: 9%;
+  right: 20px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.waiting-pickup{
+  position: absolute;
+  bottom: 9%;
+  right: 20px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+
